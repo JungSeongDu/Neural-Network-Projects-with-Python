@@ -48,7 +48,7 @@ model.add(Dense(128,activation='relu',input_dim=X_train.shape[1])) #shape[0]은 
 model.add(Dense(64,activation='relu'))
 model.add(Dense(32,activation='relu'))
 model.add(Dense(8,activation='relu'))
-model.add(Dense(1))
+model.add(Dense(1)) #회귀모델에는 활성화 함수를 적용하지 않음 ==> 출력값을 왜곡하고 모델 성능에 악영향을 줄수 있음
 
 model.compile(loss='mse',optimizer='adam',metrics=['mse'])
 # loss='mse' : 모델이 최소화하려는 손실 함수를 지정
